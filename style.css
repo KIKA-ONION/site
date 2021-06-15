@@ -4,6 +4,33 @@ body {
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
 }
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ 
+header{
+    width: 100%;
+    color: white;
+    background: red;
+    height: 70px;
+}
+
+
+
+.center {
+    text-align: center;
+}
+
+
+
+
+
+
+
 ul {
     
     display: flex;

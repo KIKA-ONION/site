@@ -13,26 +13,32 @@ body {
 
 
 header {
+    color: #fff;
     text-align: justify;
     letter-spacing: 1px;
     height: 2em;
     padding: 2em 5%;
     background: #59316B; 
-    color: #fff;
+    
 }
 
 header h1,
 header nav {
+    color: #fff;
     display: inline-block;
 }
 
+
 header h1 {
+    color: #fff;
     transition: 0.8s linear;
 }
+
 
 header h1:hover{
     color: rgb(231, 185, 100)
 }
+
 
 header::after {
     content: '';
@@ -40,21 +46,24 @@ header::after {
     width: 100%;
 }
 
+
 header a {
     text-decoration: none;
     transition: 0.8s linear;
 }
 
+
 header a:visited{
     color: white;
 }
+
 
 header a:active{
     color: white;
 }
 
+
 header a:hover{
     color: rgb(231, 185, 100)
 }
-
 

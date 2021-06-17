@@ -30,7 +30,7 @@
     width: 80%;
     display: block;
     border-bottom: 0.3rem solid transparent;
-    transition: all 0.3s;
+    transition:0.5s;
 }
 
 .form__input:placeholder-shown + .form__label {

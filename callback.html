@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="input_button.css">
+    
     <title>Окна Onion</title>
     
 </head>
@@ -31,22 +32,25 @@
     </div>
     </header>
     <div class="page-container">
-        <div class="container"><h2 style="color: #49026b;">Оставьте нам номер, мы объязательно перезвоним</h2></div>
-        <div class="container"><link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <form action="http://localhost:8080" method="post">
+        <div class="container"><h2 style="color: #49026b;">Закажите обратный звонок, мы объязательно перезвоним</h2></div>
+        <div class="container">
             <div class="form__group">
-              <input type="text" class="form__input" id="name" placeholder="Имя" required="" />
+              <input type="text" class="form__input" name="name" placeholder="Имя" required="" />
               <!-- <label for="name" class="form__label">Full Name</label> -->
             </div>
         </div>
-        <div class="container"><link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <div class="container">
             <div class="form__group">
-              <input type="text" class="form__input" id="number" placeholder="Номер телефона" required="" />
+              <input type="text" class="form__input" name="number" placeholder="Номер телефона" required="" />
               <!-- <label for="name" class="form__label">Full Name</label> -->
             </div>
-        <div class="container"><a href="" class="button7">Отправить</a></div>
+        <div class="container"><input type="submit" value="Отправить" class='button'></div>
         </div>
+    </form>
     </div>
-
+    
     <footer>
         <p><b>© 2021 The Founder. Все права защищены. Перепечатка запрещена.</b></p>
     </footer>

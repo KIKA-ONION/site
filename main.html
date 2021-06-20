@@ -4,13 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slaider.css">
+    <!-- Подключаем CSS слайдера -->
+    <link rel="stylesheet" href="https://itchief.ru/examples/libs/simple-adaptive-slider/simple-adaptive-slider.min.css">
+    <!-- Подключаем JS слайдера -->
+    <script defer src="https://itchief.ru/examples/libs/simple-adaptive-slider/simple-adaptive-slider.min.js"></script>
     <title>Окна Onion</title>
-    
-</head>
-<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          // инициализация слайдера
+          var slider = new SimpleAdaptiveSlider('.slider', {
+            loop: true,
+            autoplay: false,
+            interval: 5000,
+            swipe: true,
+          });
+        });
+    </script>
     <style>
+       
+        .slider__items {
+          counter-reset: slide;
+        }
+    
+        .slider__item {
+          counter-increment: slide;
+        }
+    
+        /* .slider__item>div::before {
+          content: counter(slide);
+          position: absolute;
+          top: 10px;
+          right: 20px;
+          color: #fff;
+          font-style: italic;
+          font-size: 32px;
+          font-weight: bold;
+        } */
+
         header {
             color: #fff;
             text-align: justify;
@@ -19,28 +51,49 @@
             padding: 2em 5%;
             background: #59316B; 
         }
-    </style>
+      </style>
+</head>
+<body link="#ffffff">
+    
     <header class="load">           
         <h1>Окна Onion</h1>
         <nav> 
-            <a href=main.html>• Главная⁣ᅠ 
-            <a href=#>• Товары⁣ᅠ 
-            <a href=#>• Калькулятор⁣ᅠ 
-            <a href="callback.html">• Обратный звонок⁣⁣</a>
-        </nav>
+          <a href=main.html>• Главная⁣ᅠ 
+          <a href=#>• Товары⁣ᅠ 
+          <a href=#>• Калькуляторᅠ 
+          <a href="about.html">• О насᅠ 
+          <a href="callback.html">• Обратный звонок⁣⁣</a>
+      </nav>
     </div>
     </header>
     <div class="page-container">
         <div class="container">
             <h2 >Главная Страница</h2>
         </div>
-            <div class="p-top">
-            <div class="container">
-                <img src="./main.jpg" alt="" style="width: 70%;">
-                <div class="centered"><p><b> Ежемесячно более 500 человек доверяют «Онка Onion» остекление своего дома или офиса. Мы производим окна на собственном заводе в Тверской области с 2007 года и являемся официальным партнером международной компании Deceuninck в России. </b> </p>
+        <div class="container">
+        <div class="slider">
+            <div class="slider__wrapper">
+              <div class="slider__items">
+                <div class="slider__item">
+                  <div style="height: 300px; background: url(photos/1.jpg);"></div>
                 </div>
+                <div class="slider__item">
+                  <div style="height: 300px; background: url(photos/2.jpg);"></div>
+                </div>
+                <div class="slider__item">
+                  <div style="height: 300px; background: url(photos/3.jpg);"></div>
+                </div>
+                <div class="slider__item">
+                  <div style="height: 300px; background: url(photos/4.jpg);"></div>
+                </div>
+              </div>
             </div>
-        </div>  
+            <a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a>
+            <a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a>
+          </div>
+        </div>
+        
+              
         <div class="fo-block fo-block_padding gallery-block">
             <h3><h2><div class="center">Как заказать установку пластиковых окон</div><br></h2></h3>
             Наши специалисты готовы приехать на замер в удобное для вас время. Достаточно позвонить по телефонам или заказать обратный звонок на сайте. Менеджеры «Окна Onion» оперативно перезвонят и оформят заявку.
@@ -48,9 +101,9 @@
             Установка пластиковых окон проходит в несколько этапов:<br><br>
             <ul>
                 <li>Замерщик делает бесплатный замер, проводит консультацию по материалам, профилю и фурнитуре.
-                <li> После получения измерений и согласования покупки мы приступаем к изготовлению оконной конструкции. Каждый этап производства проходит контроль качества.
-                <li> Готовые окна поставляются клиенту в упакованном виде в специализированном транспорте нашей «Фабрики Окон». Это гарантирует сохранность продукции при транспортировке.
-                <li> Завершающий этап — монтаж оконных конструкций. Установка проводится в соответствии с ГОСТ. Опыт наших мастеров — более 10 лет.  
+                <li>После получения измерений и согласования покупки мы приступаем к изготовлению оконной конструкции. Каждый этап производства проходит контроль качества.
+                <li>Готовые окна поставляются клиенту в упакованном виде в специализированном транспорте нашей «Фабрики Окон». Это гарантирует сохранность продукции при транспортировке.
+                <li>Завершающий этап — монтаж оконных конструкций. Установка проводится в соответствии с ГОСТ. Опыт наших мастеров — более 10 лет.  
             </ul>
         </div>  
     </div>

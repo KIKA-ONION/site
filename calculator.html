@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/input_button.css">
+    <link rel="stylesheet" href="css/radio_button.css">
+    <title>Окна Onion</title>
+    <script>
+        function calc ()
+        {
+            var width  = Number.parseInt(document.getElementsByName("param")[0].value)   
+            var height = Number.parseInt(document.getElementsByName("param")[1].value)
+            if (isNaN(width) || isNaN(height))
+            {
+                document.getElementById("answer").textContent = "Вы не ввели числа!"
+                return
+            }
+            else
+            {
+                var inp = document.getElementsByName('radio');
+                for (var i = 0; i < inp.length; i++) {
+                    if (inp[i].checked) {
+                        var type_of_window = i + 1;
+                    }
+                }
+                answer = (width + height * 1.5) * type_of_window  
+                document.getElementById("answer").textContent = (answer + " р.")
+            }
+
+        }
+    </script>
+</head>
+<body link="#ffffff">
+    <style>
+        header {
+            color: #fff;
+            text-align: justify;
+            letter-spacing: 1px;
+            height: 2em;
+            padding: 2em 5%;
+            background: #59316B; 
+        }
+    </style>
+    <header class="load">           
+        <h1>Окна Onion</h1>
+        <nav> 
+            <a href=main.html>• Главная⁣ᅠ 
+            <a href=calculator.html>• Калькуляторᅠ 
+            <a href="about.html">• О насᅠ 
+            <a href="callback.html">• Обратный звонок⁣⁣</a>
+        </nav>
+    </div>
+    </header>
+    <div class="page-container">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <form action="http://localhost:8080" method="post">
+        <div class="container"><h2 style="color: #49026b;">Калькулятор</h2></div>
+        <div class="container">
+            <div class="form__group">
+              <input type="text" class="form__input" name="param" placeholder="Ширина" required="" value=""/ id="1">
+              <!-- <label for="name" class="form__label">Full Name</label> -->
+            </div>
+        </div>
+        <div class="container">
+            <div class="form__group">
+              <input type="text" class="form__input" name="param" placeholder="Высота" required="" value="" id=2/>
+              <!-- <label for="name" class="form__label">Full Name</label> -->
+            </div>
+            
+            <br>
+        <div class="container">
+            <div class="form_radio_btn">
+                <input id="radio-1" type="radio" name="radio" value="1" checked>
+                <label for="radio-1">Одностворчатые</label>
+            </div>
+             
+            <div class="form_radio_btn">
+                <input id="radio-2" type="radio" name="radio" value="2">
+                <label for="radio-2">Двухстворчатые</label>
+            </div>
+             
+            <div class="form_radio_btn">
+                <input id="radio-3" type="radio" name="radio" value="3">
+                <label for="radio-3">Трёхстворчатые</label>
+            </div>
+             
+            
+        </div>
+        <div class="container"><input type="button" value="Рассчитать" class='button' onclick="calc()"></div>
+        </div>
+        <div class="container"><P id='answer'>
+
+        </P></div>
+        
+        <br>
+    </form> 
+    </div>
+    
+    <footer>
+        <p><b>© 2021 The Founder. Все права защищены. Перепечатка запрещена.</b></p>
+    </footer>
+</body>
+</html>
